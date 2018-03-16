@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<style>
+body {
+	font-family: Arial, Helvetica, sans-serif;
+    background-image:url('ramalogingif.gif');
+    background-size:100%;
+	background-color:f1f1f1;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+	background-position:center;
+    height:100%;
+    width:100%;
+}
+form { solid #f1f1f1;}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px 20px;
+    margin: 5px 0px;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    display:inline-block;
+    cursor: pointer;
+    width: 50%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: center;
+    top: 100%;
+	width:200px;
+    height:50px;
+	
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+.user{
+	width:400px;
+    height:50px;
+    background-color: #f1f1f1;
+    color:White;
+    margin:0 auto;
+    text-align:center;
+	}
+	.passwrd{
+	width:400px;
+    height:50px;
+    background-color: #f1f1f1;
+    color:White;
+    margin:0 auto;
+    text-align:center;
+	}
+	.boxes{
+		margin-left:-300px;
+		}
+	.boxes1{
+		margin-left:-220px;
+		}
+	.boxes2{
+		margin-left:-300px;
+		}
+.container {
+    padding: 20px 70px;
+}
+.containerc {
+    padding: 20px 70px;
+	opacity:1.0;
+}
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<h2 align="center">Sign Up</h2>
+
+<form action="rama.html" method="post">
+  <div class="imgcontainer">
+    <img src="ramalogin.jpg" style="width:200px;height:200px" alt= "Avatar" class="avatar"> 
+  </div>
+  
+
+
+  <div class="container">
+		<div class="boxes2">
+  	 <label for="uname"><p align="center"  style="font-size:130%" >Username</p></label> 
+	 </div>
+	 <div class="user">
+    <input type="text" placeholder="Enter Username" name="uname" required>
+	</div>
+	<div class="boxes">
+    <label for="psw" ><p align="center" style="font-size:130%" >Password</p></label>
+	</div>
+	<div class="passwrd">
+    <input type="password" placeholder="Enter Password"  name="psw" required>
+	</div>
+	<div class="boxes1">
+    <label for="psw" ><p align="center" style="font-size:130%" >Confirm Password</p></label>
+	</div>
+	<div class="passwrd">
+    <input type="password" placeholder="Re-Enter Password"  name="psw1" required>
+	</div>
+    </div>
+    <div class="wrapper">
+    <button type="submit" class="button" style="font-size:120%">Sign up</button>
+    </div>
+    
+
+  <div class="containerc" style="background-color:#ffffff00">
+    <button id="but" type="button"  class="cancelbtn">Cancel</button>
+  </div>
+  <script type="text/javascript">
+    document.getElementById("but").onclick = function () {
+        location.href = "rama.html";
+    };
+	</script>
+</form>
+
+</body>
+</html>
