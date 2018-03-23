@@ -42,12 +42,21 @@ button:hover {
 }
 
 .button {
-    position: center;
+    position:center;
     top: 100%;
 	width:200px;
     height:50px;
 	
 }
+.button1 {
+    position:center;
+    top: 100%;
+	width:150px;
+    height:50px;
+	margin-left:150px;
+	margin-top:60px;
+}
+
 #wgt {
    -webkit-appearance: none; 
    -moz-appearance: none;
@@ -76,7 +85,7 @@ button:hover {
 	}
 	.boxes{
 		margin-left:-350px;
-		margin-top:40px;
+		margin-top:70px;
 		}
 	.boxes1{
 		margin-left:-300px;
@@ -92,14 +101,11 @@ button:hover {
 <body>
 
 <h2 align="center">Shoppers's End</h2>
-
-<form action="rama2.html" method="post">
-  
-  <div class="container">
-		<div class="boxes1">
+<form action="/set_price" method="post">
+	<div class="boxes1">
   	 <label for="uname"><p align="center"  style="font-size:130%" >Product-List</p></label> 
 	 </div>
-	 <div class="user">
+	<div class="user">
     <select name="wgt" id="wgt">
 		<option value="Dairy">Dairy</option>
 		<option value="Grocery">Grocery</option>
@@ -107,10 +113,40 @@ button:hover {
 		<option value="Cooking">Cooking</option>
 	</select>
 	</div>
+	<button type="submit" class="button1" style="font-size:120%">Get Price</button>
+	
 	<div class="boxes">
-    <label for="psw" ><p align="center" style="font-size:130%" >Price</p></label>
+    <label for="psw" ><p align="center" style="font-size:120%" >Price</p></label>
 	</div>
-	<div class="passwrd"> <input type="text" value="70"  name="psw" readonly="true">
+	{% if val %}
+	<div class="passwrd"> <input type="text" id="main" value= {{ val }}  name="psw" readonly="true">
+	{% else %}
+	<div class="passwrd"> <input type="text" id="main" value=0  name="psw" readonly="true">
+	{% endif %}
+	</div>
+	<div class="passwrd"> <input type="text" id="main1" value= {{ val1 }}  name="psw1" readonly="true">
+	</div>
+	</form>
+	 <div class="passwrd">
+	<button  class="button1" id="pass" onclick="k()" style="font-size:120%">Bill Generate</button>
+	</div>
+<script>
+function k(){
+var x=document.getElementById("main");
+location.href = '/bill?value='+x.value;
+}
+</script>
+<!--<form action="rama2.html" method="post">
+  
+  <div class="container">
+		<div class="boxes1">
+  	 <label for="uname"><p align="center"  style="font-size:130%" >Product-List</p></label> 
+	 </div>
+	 <div class="user">
+	<div class="boxes">
+    <label for="psw" ><p align="center" style="font-size:120%" >Price</p></label>
+	</div>
+	<div class="passwrd"> <input type="text" id="main" value= {{ val }}  name="psw" readonly="true">
 	</div>
     </div>
     <div class="wrapper">
@@ -118,7 +154,6 @@ button:hover {
     </div>
     
 
-</form>
-
+</form>-->
 </body>
 </html>

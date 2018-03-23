@@ -1,0 +1,11 @@
+{
+  "name": "supermarket_dbms-master",
+  "version": "1.0.0",
+  "description": "A project to support super market at the base do with Nodejs ,bootstrap and mysql",
+  "main": "connect.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
