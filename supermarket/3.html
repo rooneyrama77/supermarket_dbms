@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<style>
+body {
+	font-family: Arial, Helvetica, sans-serif;
+    background-size:100%;
+	background-color:f1f1f1;
+    background-attachment: fixed;
+	background-position:center;
+    height:100%;
+    width:100%;
+}
+.passwrd{
+width:400px;
+    height:50px;
+    background-color: #f1f1f1;
+    color:White;
+    margin:0 auto;
+    text-align:center;
+	}
+.boxes2{
+		margin-left:-300px;
+		}
+.button {
+    position:center;
+    top: 100%;
+	width:200px;
+    height:50px;
+	
+}
+.button1 {
+    position:center;
+    top: 100%;
+	width:150px;
+    height:50px;
+	margin-left:150px;
+	margin-top:60px;
+}
+</style>
+<body>
+
+<h2 align="center">Bill Payment</h2>
+	<div class="boxes2">
+  	 <label for="Bill"><p align="center"  style="font-size:130%" >Bill Payment</p></label> 
+	 </div>
+	<div class="passwrd"> <input type="text" id="main1" value= {{ val }}  name="psw1" readonly="true">
+	</div>
+	 <div class="passwrd">
+	<button  class="button1" id="pass" onclick="k()" style="font-size:120%">Bill Pay</button>
+	</div>
+<script>
+function k(){
+var x=document.getElementById("main");
+location.href = '/bill1';
+}
+</script>
+</body>
+</html>

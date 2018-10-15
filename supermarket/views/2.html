@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<style>
+body {
+	font-family: Arial, Helvetica, sans-serif;
+    background-size:100%;
+	background-color:f1f1f1;
+    background-attachment: fixed;
+	background-position:center;
+    height:100%;
+    width:100%;
+}
+form { solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px 20px;
+    margin: 5px 0px;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    display:inline-block;
+    cursor: pointer;
+    width: 50%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position:center;
+    top: 100%;
+	width:200px;
+    height:50px;
+	
+}
+.button1 {
+    position:center;
+    top: 100%;
+	width:150px;
+    height:50px;
+	margin-left:150px;
+	margin-top:60px;
+}
+
+#wgt {
+   -webkit-appearance: none; 
+   -moz-appearance: none;
+   appearance: none;   
+	width:400px;
+	height:30px;
+	margin-left:-180px;
+}
+
+.user{
+	width:40px;
+    height:10px;
+    background-color: #f1f1f1;
+    color:White;
+    margin:0 auto;
+    text-align:center;
+	}
+	.passwrd{
+	width:400px;
+    height:30px;
+	left:200px;
+    background-color: #f1f1f1;
+    color:White;
+    margin:0 auto;
+    text-align:center;
+	}
+	.boxes{
+		margin-left:-350px;
+		margin-top:70px;
+		}
+	.boxes1{
+		margin-left:-300px;
+		line-height:2em;
+		}
+.container {
+    padding: 20px 70px;
+}
+
+}
+</style>
+</head>
+<body>
+
+<h2 align="center">Shoppers's End</h2>
+<form action="/set_price" method="post">
+	<div class="boxes1">
+  	 <label for="uname"><p align="center"  style="font-size:130%" >Product-List</p></label> 
+	 </div>
+	<div class="user">
+    <select name="wgt" id="wgt">
+		<option value="Dairy">Dairy</option>
+		<option value="Grocery">Grocery</option>
+		<option value="Beverages">Beverages</option>
+		<option value="Cooking">Cooking</option>
+	</select>
+	</div>
+	<button type="submit" class="button1" style="font-size:120%">Get Price</button>
+	
+	<div class="boxes">
+    <label for="psw" ><p align="center" style="font-size:120%" >Price</p></label>
+	</div>
+	{% if val %}
+	<div class="passwrd"> <input type="text" id="main" value= {{ val }}  name="psw" readonly="true">
+	{% else %}
+	<div class="passwrd"> <input type="text" id="main" value=0  name="psw" readonly="true">
+	{% endif %}
+	</div>
+	<div class="passwrd"> <input type="text" id="main1" value= {{ val1 }}  name="psw1" readonly="true">
+	</div>
+	</form>
+	 <div class="passwrd">
+	<button  class="button1" id="pass" onclick="k()" style="font-size:120%">Bill Generate</button>
+	</div>
+<script>
+function k(){
+var x=document.getElementById("main");
+location.href = '/bill?value='+x.value;
+}
+</script>
+<!--<form action="rama2.html" method="post">
+  
+  <div class="container">
+		<div class="boxes1">
+  	 <label for="uname"><p align="center"  style="font-size:130%" >Product-List</p></label> 
+	 </div>
+	 <div class="user">
+	<div class="boxes">
+    <label for="psw" ><p align="center" style="font-size:120%" >Price</p></label>
+	</div>
+	<div class="passwrd"> <input type="text" id="main" value= {{ val }}  name="psw" readonly="true">
+	</div>
+    </div>
+    <div class="wrapper">
+    <button type="submit" class="button" style="font-size:120%">Bill Generate</button>
+    </div>
+    
+
+</form>-->
+</body>
+</html>
